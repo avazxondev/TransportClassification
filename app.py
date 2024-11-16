@@ -19,7 +19,9 @@ if file:
     img = PILImage.create(file)
 
     #model
-    model = load_learner('transport_model.pkl')
+    model_path = Path('transport_model.pkl').resolve()
+    model = load_learner(model_path)
+
 
     #prediction
     pred, pred_id, probs= model.predict(img)
