@@ -1,10 +1,11 @@
 import streamlit as st
 from fastai.vision.all import *
 import pathlib
-import plotly.express as px 
-temp = pathlib.PosixPath
-pathlib.PosixPath = pathlib.WindowsPath
+import plotly.express as px
 
+plt = platform.sydtem()
+if plt == "Linux": pathlib.WindowsPath = pathlib.PosixPath
+    
 #title
 st.title('The model of CalassificationVehicles')
 
